@@ -1,17 +1,16 @@
-import { Router } from "express";
+import { Router } from 'express';
+// import { Logging } from './../../../../providers/library/Logging';
 
 export class WebRoutes {
-  router: Router = Router();
+    router: Router = Router();
 
-  constructor() {
-    this.init();
-  }
+    constructor() {
+        this.init();
+    }
 
-  private init() {
-    console.log("WebRoutes initialized");
-
-    this.router.get("/", (req, res) => { 
-      res.send("Hello World")
-    });
-  }
+    private init() {
+        this.router.get('/', (req, res) => {
+            res.send('Hello World');
+        });
+    }
 }

@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { TagGateway } from "../../../../../app/Domains/Tag/Http/Gateway";
 
 export class V1ApiRoutes {
     router:Router = Router();
@@ -8,7 +9,7 @@ export class V1ApiRoutes {
     }
     
     private init() {
-        console.log("V1ApiRoutes initialized");
+         this.router.use("/tags", new TagGateway(Router()).router);
     }
 
 }

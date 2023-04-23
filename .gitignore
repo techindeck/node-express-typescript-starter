@@ -3,3 +3,6 @@
 .env
 
 *.pem
+
+/tmp
+/log
